@@ -45,7 +45,7 @@ El tipo Persona es un record que se implementa dentro del paquete `fp.clinico` c
 **Constructores**: 
 
 Dado que es un record solamente se define en su estructura los atributos:
-`Persona(String nombre, String apellidos, String dni, LocalDate fechaNacimiento)`
+- Record: `Persona(String nombre, String apellidos, String dni, LocalDate fechaNacimiento)`
 
 **Restricciones**:
  
@@ -78,7 +78,7 @@ El tipo Paciente es un record que se implementa dentro del paquete `fp.clinico` 
 **Constructores**: 
 
 Dado que es un record solamente se define en su estructura los atributos:
-`Paciente(Persona persona, String codigoImpreso, LocalDateTime fechaHoraIngreso)`
+- Record: `Paciente(Persona persona, String codigoImpreso, LocalDateTime fechaHoraIngreso)`
 
 **Restricciones**:
  
@@ -112,7 +112,7 @@ El tipo PacienteEstudio es un record que se implementa dentro del paquete `fp.cl
 **Constructores**: 
 
 Dado que es un record solamente se define en su estructura los atributos:
-`PacienteEstudio(String id, String genero, Double edad, Boolean hipertension, Boolean enfermedadCorazon, TipoResidencia tipoResidencia, Double nivelMedioGlucosa)`
+- Record: `PacienteEstudio(String id, String genero, Double edad, Boolean hipertension, Boolean enfermedadCorazon, TipoResidencia tipoResidencia, Double nivelMedioGlucosa)`
 
 **Restricciones**:
  
@@ -148,7 +148,7 @@ El tipo Vacunacion es un record que se implementa dentro del paquete `fp.vacunas
 **Constructores**: 
 
 Dado que es un record solamente se define en su estructura los atributos:
-`Vacunacion(LocalDate fecha, String comunidad, Integer pfizer, Integer moderna, Integer astrazeneca, Integer janssen, Integer numeroPersonas)`
+- Record: `Vacunacion(LocalDate fecha, String comunidad, Integer pfizer, Integer moderna, Integer astrazeneca, Integer janssen, Integer numeroPersonas)`
 
 **Restricciones**:
  
