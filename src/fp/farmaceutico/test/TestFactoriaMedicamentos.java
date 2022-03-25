@@ -1,4 +1,7 @@
-package fp.farmaceutico;
+package fp.farmaceutico.test;
+
+import fp.farmaceutico.FactoriaMedicamentos;
+import fp.farmaceutico.Medicamento;
 
 public class TestFactoriaMedicamentos {
 
