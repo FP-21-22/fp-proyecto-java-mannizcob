@@ -15,13 +15,11 @@ public record Paciente(Persona persona, String codigoImpreso, LocalDateTime fech
 	//Métodos de factoría
 	//- Método static of: recibe nombre, apellidos, dni, fecha de nacimiento, código y fecha y hora de ingreso y devuelve un paciente.
 	public static Paciente of(String nombre, String apellidos, String dni, LocalDate fechaNacimiento, String codigoImpreso, LocalDateTime fechaHoraIngreso) {
-		Paciente res = new Paciente(Persona.of(nombre, apellidos, dni, fechaNacimiento), codigoImpreso, fechaHoraIngreso);
-		return res;
+		return new Paciente(Persona.of(nombre, apellidos, dni, fechaNacimiento), codigoImpreso, fechaHoraIngreso);
 	}
 	//- Método static of: recibe un objeto persona, un código y una fecha y hora de ingreso y devuelve un paciente.
 	public static Paciente of(Persona p, String codigoImpreso, LocalDateTime fechaHoraIngreso) {
-		Paciente res = Paciente.of(p, codigoImpreso, fechaHoraIngreso);
-		return res;
+		return Paciente.of(p, codigoImpreso, fechaHoraIngreso);
 	}
 	
 	//Métodos de las propiedades

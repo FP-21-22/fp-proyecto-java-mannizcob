@@ -15,8 +15,7 @@ public record Vacunacion(LocalDate fecha, String comunidad, Integer pfizer, Inte
 	//Métodos de factoría
 	//- Método static of: recibe valores para cada propiedad básica y devuelve un objeto del tipo.
 	public static Vacunacion of(LocalDate fecha, String comunidad, Integer pfizer, Integer moderna, Integer astrazeneca, Integer janssen, Integer numeroPersonas) {
-		Vacunacion res = new Vacunacion(fecha, comunidad, pfizer, moderna, astrazeneca, janssen, numeroPersonas);
-		return res;
+		return new Vacunacion(fecha, comunidad, pfizer, moderna, astrazeneca, janssen, numeroPersonas);
 	}
 	//- Método static parse: recibe una cadena con un formato específico y devuelve un objeto del tipo. Ejemplo de cadena: “04/01/2021;Andalucía;140295;0;0;0;0”.
 	public static Vacunacion parse(String cadena) {
@@ -32,8 +31,7 @@ public record Vacunacion(LocalDate fecha, String comunidad, Integer pfizer, Inte
 		Integer astrazeneca = Integer.parseInt(datos[4]);
 		Integer janssen = Integer.parseInt(datos[5]);
 		Integer numeroPersonas = Integer.parseInt(datos[6]);
-		Vacunacion res = Vacunacion.of(fecha, comunidad, pfizer, moderna, astrazeneca, janssen, numeroPersonas);
-		return res;
+		return Vacunacion.of(fecha, comunidad, pfizer, moderna, astrazeneca, janssen, numeroPersonas);
 	}
 	
 	//Métodos de las propiedades

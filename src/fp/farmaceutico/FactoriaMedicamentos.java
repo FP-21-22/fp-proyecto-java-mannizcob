@@ -21,25 +21,10 @@ public class FactoriaMedicamentos {
 		Double puntuacion = Double.parseDouble(datos[4]);
 		Integer indiceSomatico = Integer.parseInt(datos[5]);
 		LocalDate fechaCatalogo = LocalDate.parse(datos[6], DateTimeFormatter.ofPattern("d/M/y"));
-		Medicamento res = new Medicamento(nombreMedicamento, tipoMedicamento, codigoEnfermedad, farmaceutica, puntuacion, indiceSomatico, fechaCatalogo);
-		return res;
+		return new Medicamento(nombreMedicamento, tipoMedicamento, codigoEnfermedad, farmaceutica, puntuacion, indiceSomatico, fechaCatalogo);
 	}
 	
 	private static TipoMedicamento isTipoMedicamento(String cadena) {
-		TipoMedicamento res;
-		cadena = cadena.toUpperCase().toString();
-		if(cadena.contentEquals("ANATOMICO")) {
-			res = TipoMedicamento.ANATÓMICO;
-		}
-		else if(cadena.contentEquals("QUIMICO")){
-			res = TipoMedicamento.QUÍMICO;
-		}
-		else if(cadena.contentEquals("TERAPEUTICO")) {
-			res = TipoMedicamento.TERAPÉUTICO;
-		}
-		else {
-			res = null;
-		}
-		return res;
+		return TipoMedicamento.valueOf(cadena.toUpperCase());
 	}
 }

@@ -15,8 +15,7 @@ public record PacienteEstudio(String id, String genero, Double edad, Boolean hip
 	//Métodos de factoría
 	//- Método static of: recibe valores para cada propiedad básica y devuelve un objeto del tipo.
 	public static PacienteEstudio of(String id, String genero, Double edad, Boolean hipertension, Boolean enfermedadCorazon, TipoResidencia tipoResidencia, Double nivelMedioGlucosa) {
-		PacienteEstudio res = new PacienteEstudio(id, genero, edad, hipertension, enfermedadCorazon, tipoResidencia, nivelMedioGlucosa);
-		return res;
+		return new PacienteEstudio(id, genero, edad, hipertension, enfermedadCorazon, tipoResidencia, nivelMedioGlucosa);
 	}
 	//- Método static parse: recibe una cadena con un formato especificado y y devuelve un objeto del tipo. Ejemplo de cadena: “6306;Male;80;false;false;URBANA;83.84”
 	public static PacienteEstudio parse(String cadena) {
@@ -32,8 +31,7 @@ public record PacienteEstudio(String id, String genero, Double edad, Boolean hip
 		Boolean enfermedadCorazon = Boolean.parseBoolean(datos[4]);
 		TipoResidencia tipoResidencia = isTipoResidencia(datos[5]);
 		Double nivelMedioGlucosa = Double.parseDouble(datos[6]);
-		PacienteEstudio res = PacienteEstudio.of(id, genero, edad, hipertension, enfermedadCorazon, tipoResidencia, nivelMedioGlucosa);
-		return res;
+		return PacienteEstudio.of(id, genero, edad, hipertension, enfermedadCorazon, tipoResidencia, nivelMedioGlucosa);
 	}
 	
 	//Métodos de las propiedades
@@ -46,18 +44,7 @@ public record PacienteEstudio(String id, String genero, Double edad, Boolean hip
 	}
 	
 	private static TipoResidencia isTipoResidencia(String cadena) {
-		TipoResidencia res;
-		cadena = cadena.toUpperCase().toString();
-		if(cadena.contentEquals("RURAL")) {
-			res = TipoResidencia.RURAL;
-		}
-		else if(cadena.contentEquals("URBANA")){
-			res = TipoResidencia.URBANA;
-		}
-		else {
-			res = null;
-		}
-		return res;
+		return TipoResidencia.valueOf(cadena.toUpperCase());
 	}
 
 	//· Representación como cadena: informa del id y la edad del paciente.

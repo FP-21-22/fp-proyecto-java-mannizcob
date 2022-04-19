@@ -60,11 +60,7 @@ public class Medicamento implements Comparable<Medicamento>{
 	
 	//Métodos derivados
 	public Boolean getTratarEnfermedad(String codigo) {
-		Boolean res = false;
-		if(this.codigoEnfermedad.contentEquals(codigo)) {
-			res = true;
-		}
-		return res;
+		return this.codigoEnfermedad.contentEquals(codigo);
 	}
 
 	//· Representación como cadena: según el nombre del medicamento y de la farmacéutica.

@@ -20,8 +20,7 @@ public record Persona(String nombre, String apellidos, String dni, LocalDate fec
 	//Métodos de factoría
 	//- Método static of: Recibe nombre, apellidos, dni y fecha de nacimiento y devuelve una persona.
 	public static Persona of(String nombre, String apellidos, String dni, LocalDate fechaNacimiento) {
-		Persona res = new Persona(nombre, apellidos, dni, fechaNacimiento);
-		return res;
+		return new Persona(nombre, apellidos, dni, fechaNacimiento);
 	}
 	//- Método static parse: Recibe una cadena con un formato específico y devuelve una persona. Ejemplo de cadena: “Juan, García Rodríguez, 12755078Z, 20/03/1965”.
 	public static Persona parse(String cadena) {
