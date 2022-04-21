@@ -29,7 +29,7 @@ public record PacienteEstudio(String id, String genero, Double edad, Boolean hip
 		Double edad = Double.parseDouble(datos[2]);
 		Boolean hipertension = Boolean.parseBoolean(datos[3]);
 		Boolean enfermedadCorazon = Boolean.parseBoolean(datos[4]);
-		TipoResidencia tipoResidencia = isTipoResidencia(datos[5]);
+		TipoResidencia tipoResidencia = TipoResidencia.valueOf(datos[5].toUpperCase());
 		Double nivelMedioGlucosa = Double.parseDouble(datos[6]);
 		return PacienteEstudio.of(id, genero, edad, hipertension, enfermedadCorazon, tipoResidencia, nivelMedioGlucosa);
 	}
@@ -41,10 +41,6 @@ public record PacienteEstudio(String id, String genero, Double edad, Boolean hip
 			res = true;
 		}
 		return res;
-	}
-	
-	private static TipoResidencia isTipoResidencia(String cadena) {
-		return TipoResidencia.valueOf(cadena.toUpperCase());
 	}
 
 	//· Representación como cadena: informa del id y la edad del paciente.

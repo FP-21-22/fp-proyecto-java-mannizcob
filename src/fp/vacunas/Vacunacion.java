@@ -9,7 +9,7 @@ public record Vacunacion(LocalDate fecha, String comunidad, Integer pfizer, Inte
 	//Constructor (lo redefinimos para añadir las restricciones)
 	public Vacunacion {
 		//- La fecha de debe ser posterior al 01/02/2021.
-		Checkers.check("La fecha " + fecha + " debe ser posterior a " + LocalDate.of(2021, 2, 1), fecha.isAfter(LocalDate.of(2021, 2, 1)));
+		Checkers.check("La fecha " + fecha + " debe ser posterior a " + LocalDate.of(2021, 1, 2), fecha.isAfter(LocalDate.of(2021, 1, 2)));
 	}
 	
 	//Métodos de factoría

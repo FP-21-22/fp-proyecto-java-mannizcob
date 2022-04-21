@@ -32,7 +32,7 @@ public record Persona(String nombre, String apellidos, String dni, LocalDate fec
 		String nombre = datos[0].trim();
 		String apellidos = datos[1].trim();
 		String dni = datos[2].trim();
-		LocalDate fechaNacimiento = LocalDate.parse(datos[3], DateTimeFormatter.ofPattern("d/M/y"));
+		LocalDate fechaNacimiento = LocalDate.parse(datos[3].trim(), DateTimeFormatter.ofPattern("d/M/y"));
 		return Persona.of(nombre, apellidos, dni, fechaNacimiento);
 	}
 	
