@@ -8,29 +8,10 @@ En las siguientes entregas se trabajara con alguno de los datasets proporcionado
 
 * **/src**: Contiene los diferentes archivos de Java que forman parte del proyecto.
   * **fp.clinico**: Paquete que contiene las clases e interfaces del tipo Paciente.
-   * **\<EstudioClinico.java\>**: Interfaz con los métodos del tipo EstudioClinico.
-   * **\<EstudioClinicoBucles.java\>**: Clase que implementa los métodos de la interfaz EstudioClinico con bucles.
-   * **\<EstudioClinicoStream.java\>**: Clase que implementa los métodos de la interfaz EstudioClinico con Stream.
-   * **\<Paciente.java\>**: Record del tipo Paciente.
-   * **\<PacienteEstudio.java\>**: Record del tipo PacienteEstudio.
-   * **\<Persona.java\>**: Record del tipo Persona.
-   * **\<TestEstudioClinicoBucles.java\>**: Clase con el método Main para comprobar la clase EstudioClinicoBucles.
-   * **\<TestEstudioClinicoStream.java\>**: Clase con el método Main para comprobar la clase EstudioClinicoStream.
-   * **\<TipoResidencia.java\>**: Enumerado del tipo TipoResidencia.
   * **fp.farmaceutico**: Paquete que contiene las clases e interfaces del tipo Medicamento.
-   * **\<FactoriaMedicamentos.java\>**: Clase con los métodos para leer archivos del fichero "medicamentos.csv".
-   * **\<Medicamento.java\>**: Clase del tipo Medicamento.
-   * **\<TestMedicamento.java\>**: Clase con el método Main para comprobar la clase Medicamento.
-   * **\<TipoMedicamento.java\>**: Enumerado del tipo TipoMedicamento.
   * **fp.farmaceutico.test**: Paquete que contiene la clase de test: TestFactoriaMedicamentos.
-   * **\<TestFactoriaMedicamentos.java\>**: Clase con el método Main para comprobar la factoría de Medicamento.
   * **fp.vacunas**: Paquete que contiene las clases e interfaces del tipo Vacunacion.
-   * **\<FactoriaVacunaciones.java\>**: Clase con los métodos para leer archivos del fichero "cca_vacunas_3.csv".
-   * **\<TestVacunacion.java\>**: Clase con el método Main para comprobar la clase Vacunacion.
-   * **\<Vacunacion.java\>**: Clase del tipo Vacunacion.
   * **fp.utiles**:  Paquete que contiene las clases de utilidad (Checkers y Ficheros). 
-   * **\<Checkers.java\>**: Clase que contiene los métodos para implementar restricciones.
-   * **\<Ficheros.java\>**: Clase que contiene los métodos para leer y escribir en ficheros.
 * **/data**: Contiene el dataset o datasets del proyecto.
    * **\<cca_vacunas_3.csv\>**: Archivo csv que contiene los datos a parsear del tipo Vacunacion.
    * **\<estudio_clinico.csv\>**: Archivo csv que contiene los datos a parsear del tipo PacienteEstudio.
