@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import fp.utiles.Checkers;
 import fp.utiles.Ficheros;
@@ -184,5 +185,12 @@ public class EstudioClinicoBucles implements EstudioClinico {
 		}
 		return map;
 	}
+
+	@Override
+	public String toString() {
+		return ls.stream().map(x -> x.toString()).collect(Collectors.joining("\n"));
+	}
+	
+	
 
 }

@@ -16,7 +16,6 @@ public record Persona(String nombre, String apellidos, String dni, LocalDate fec
 		boolean isChar = dni.substring(8,9).chars().allMatch(Character::isLetter);
 		Checkers.check("El dni debe ser una cadena de 8 dígitos y seguidos de una letra", dni.length() == 9 && isNumeric && isChar);
 	}
-	
 	//Métodos de factoría
 	//- Método static of: Recibe nombre, apellidos, dni y fecha de nacimiento y devuelve una persona.
 	public static Persona of(String nombre, String apellidos, String dni, LocalDate fechaNacimiento) {
