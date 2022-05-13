@@ -17,7 +17,7 @@ En las siguientes entregas se trabajara con alguno de los datasets proporcionado
    * **\<estudio_clinico.csv\>**: Archivo csv que contiene los datos a parsear del tipo PacienteEstudio.
    * **\<medicamentos.csv\>**: Archivo csv que contiene los datos a parsear del tipo Medicamento.
 * **/doc**: Contiene la documentación del proyecto.
-   * **\<Proyecto de laboratorio de Java_SUBGRUPO_IS2_3.pdf\>**: Archivo con los datos del 2º entregable.
+   * **\<Proyecto de laboratorio de Java_SUBGRUPO_IS2_3.pdf\>**: Archivo con los datos del 3º entregable.
     
 ## Estructura del *dataset*
 
