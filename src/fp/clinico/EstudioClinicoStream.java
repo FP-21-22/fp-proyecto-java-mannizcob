@@ -5,13 +5,14 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import fp.utiles.Checkers;
 import fp.utiles.Ficheros;
 
 public class EstudioClinicoStream implements EstudioClinico {
 
-	private List<PacienteEstudio> ls;
+	protected List<PacienteEstudio> ls;
 	
 	//C1: Construye el tipo EstudioClinicoBucles creando una lista sin elementos.
 	public EstudioClinicoStream() {
@@ -21,6 +22,11 @@ public class EstudioClinicoStream implements EstudioClinico {
 	//C2: Construye el tipo EstudioClinicoBucles a partir de una lista con elementos.
 	public EstudioClinicoStream(List<PacienteEstudio> ls) {
 		this.ls = ls;
+	}
+	
+	//C3: Construye el tipo EstudioClinicoBucles a partir de un stream con elementos.
+	public EstudioClinicoStream(Stream<PacienteEstudio> st) {
+		this.ls = st.toList();
 	}
 	
 	//Parse: Construye un objeto del tipo PacienteEstudio.
